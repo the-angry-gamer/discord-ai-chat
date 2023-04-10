@@ -1,0 +1,33 @@
+
+SETUP
+*************************************
+1. Create a .env file.
+
+2. Add in the following variables with their assocaited values. *These are a secret and specific to your third party integrations. These do not
+need to be in quotations.
+    DISCORD_TOKEN=
+    CHAT_GPT_KEY=
+    CHAT_GPT_MODEL=
+
+3. Setup the necessary discord bot connection: 
+    https://discord.com/developers/applications
+    > New Application
+    > Add bot
+    > Allow 'MESSAGE CONTENT INTENT' under privileged gateway intents.
+    > Follow the OAuth URL Generator to grant bot permissions, then 'Send Messages' TEXT PERMISSIONS... then copy the URL.
+        This will create a url based off discord secrets and a permissions integer.
+    > Paste the into your browser. Grant the bot permissions and you will see it added to your discord server as a user.
+
+4. Run the code => npm run dev (for hot fixing after saving) npm run start for staying up.
+
+
+
+
+USAGE
+*************************************
+Whatever chat channel that the bot is part of, the following commmands will elicit results.
+    Hello there 
+        Angry AI passes back 'General Kenobi'.
+    
+    @Angry_AI {command}
+        Will run the command against chat gpt.
